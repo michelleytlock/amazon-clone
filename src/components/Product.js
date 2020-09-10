@@ -4,7 +4,7 @@ import { useStateValue } from "../StateProvider";
 
 function Product({ id, title, image, price, rating }) {
   const [{ basket }, dispatch] = useStateValue();
-
+  // dispatch is like a gun, shoot an item
   console.log("this is the basket >>", basket )
   const addToBasket = () => {
     //dispatch some action to data layer, dispatch the item into the data layer
@@ -19,6 +19,7 @@ function Product({ id, title, image, price, rating }) {
       }
     })
   }
+
   return (
     <div className="product">
       <div className="product__info">
@@ -31,7 +32,7 @@ function Product({ id, title, image, price, rating }) {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <p>⭐</p>
+              <p key={i} ><span role="img" aria-label="emoji" >⭐</span></p>
             ))}
         </div>
       </div>
