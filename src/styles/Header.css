@@ -48,6 +48,11 @@
    color: white;
 }
 
+.header__toggle {
+   margin-right: 10px;
+   color: white;
+}
+
 .header__optionLineOne {
    font-size: 10px;
 }
