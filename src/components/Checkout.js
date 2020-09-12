@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "../styles/Checkout.css";
 import "./Subtotal";
 import Subtotal from "./Subtotal";
